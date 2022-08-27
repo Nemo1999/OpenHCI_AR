@@ -1,18 +1,129 @@
 <!DOCTYPE html>
 <html>
-  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-  <body style="margin : 0px; overflow: hidden;">
-    <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false;'>
-      <a-marker type='pattern' url='assets/pattern-marker.patt'>
-        <a-entity
-          position="0 -6 -12"
-          scale="20 0 0"
-          gltf-model="url(assets/scene.gltf)"
-        ></a-entity>
-      </a-marker>
-      <a-entity camera></a-entity>
-    </a-scene>
-  </body>
-</html>
+    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+    <!-- we import arjs version without NFT but with marker + location based support -->
+    <script src="https://raw.githack.com/AR-js-org/AR.js/dev/aframe/build/aframe-ar.js"></script>
+    <script src="./index.js"></script>
 
+
+    <body style="margin : 0px; overflow: hidden;">
+        <a-scene embedded arjs>
+        <a-marker preset="hiro">
+            <a-entity
+            position="0 0 0"
+            rotation="0 0 0"
+            scale="0.5 0.5 0.5"
+            gltf-model="url(assets/scene.gltf)"
+            ></a-entity>
+        </a-marker>
+        <a-entity camera></a-entity>
+        </a-scene>
+        <div id="player">
+          <!-- <audio autoplay hidden>
+            <source src="./hcimusic.mp3" type="audio/mpeg" />
+            If you're reading this, audio isn't supported.
+          </audio> -->
+          <audio controls autoplay hidden loop>
+            <source src="./assets/hcimusic.mp3" type="audio/ogg" />
+            <embed
+              src="./assets/hcimusic.mp3"
+              autostart="true"
+              loop="true"
+              hidden="true"
+            />
+          </audio>
+        </div>
+        <div class="Timeleft">
+          <div class="container">
+            <div class="text">Time Left :</div>
+            <div id="timeleft" class="text">300</div>
+            <div class="text">s</div>
+          </div>
+        </div>
+        <div class="snippyby">
+          <div class="text">還剩:</div>
+          <div id="countleft" class="text">10</div>
+          <div class="text">次</div>
+        </div>
+        <button id="gameStart" class="gameStart">Game Start</button>
+      </body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        width: 100%;
+        overflow: hidden;
+      }
+      .container {
+        padding: 10px 20px;
+      }
+      .text {
+        font-size: 1.25rem;
+        display: inline-block;
+        margin-left: 5px;
+        font-weight: 700;
+      }
+      .Timeleft {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        top: 5vh;
+        left: 5vw;
+        /* width: 20%; */
+        /* height: 10%; */
+        background: #90b77d;
+        border-radius: 25px;
+        box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+      }
+      .snippyby {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        top: 5vh;
+        right: 5vw;
+        background: #90b77d;
+        border-radius: 25px;
+        padding: 5px 10px;
+        box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+      }
+      .gameStart {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        width: 30%;
+        margin: auto;
+        max-width: 200px;
+        bottom: 10vh;
+        left: 0;
+        right: 0;
+        font-size: 1.25rem;
+        font-weight: 700;
+        background: #f1a661;
+        /* color: aliceblue; */
+        border-radius: 10px;
+        border: none;
+        padding: 5px 10px;
+        box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+        transition: 0.3s;
+      }
+      .displaynone {
+        display: none;
+      }
+      .view {
+        width: 50%;
+        overflow: hidden;
+        height: 50%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+      }
+    </style>
+</html>
