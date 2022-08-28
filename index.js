@@ -1,6 +1,6 @@
 console.log("Loading");
 let leftsec=300;
-let countleft=10;
+let countleft=3;
 function startTimer(duration, display) {
     let timer = duration;
     setInterval(function () {
@@ -14,6 +14,7 @@ function startTimer(duration, display) {
 
         if (--timer <= 0) {
             document.getElementById("end").classList.remove("displaynone")
+            document.getElementById('player').pause();
             timer = duration;
         }
     }, 1000);
@@ -26,6 +27,7 @@ AFRAME.registerComponent('markerhandler', {
         countleft=countleft -1;
         if (countleft <= 0) {
             document.getElementById("end").classList.remove("displaynone")
+            document.getElementById('player').pause();
         }
         count_display.textContent = countleft;
       })
