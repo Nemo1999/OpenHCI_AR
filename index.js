@@ -1,6 +1,6 @@
 console.log("Loading");
 let leftsec=300;
-let countleft=3;
+let countleft=5;
 function startTimer(duration, display) {
     let timer = duration;
     setInterval(function () {
