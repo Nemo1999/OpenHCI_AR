@@ -33,6 +33,8 @@ window.onload = function () {
       .addEventListener("click", function () { 
       display = document.querySelector('#timeleft');  
       startTimer(leftsec, display);
+      document.getElementById("intro").classList.add("displaynone")
+      console.log( document.getElementById("intro"));
       document.getElementById("gameStart").classList.add("displaynone")
        document.getElementById('player').load();
        document.getElementById('player').play();
