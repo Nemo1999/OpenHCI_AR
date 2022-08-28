@@ -1,11 +1,11 @@
 Model Information:
-* title:	Passive Marker Man Walking
-* source:	https://sketchfab.com/3d-models/passive-marker-man-walking-4b1ef9a1d8814e4c9ff4fe668d62bff1
-* author:	digitallysavvy (https://sketchfab.com/hermes.frangoudis)
+* title:	Full Body Scan - Clean Pose
+* source:	https://sketchfab.com/3d-models/full-body-scan-clean-pose-ae9559912f6240a8a87057911b69edd0
+* author:	OverseerThuror (https://sketchfab.com/OverseerThuror)
 
 Model License:
-* license type:	CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
-* requirements:	Author must be credited. No commercial use. Modified versions must have the same license.
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
 
 If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
-This work is based on "Passive Marker Man Walking" (https://sketchfab.com/3d-models/passive-marker-man-walking-4b1ef9a1d8814e4c9ff4fe668d62bff1) by digitallysavvy (https://sketchfab.com/hermes.frangoudis) licensed under CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
+This work is based on "Full Body Scan - Clean Pose" (https://sketchfab.com/3d-models/full-body-scan-clean-pose-ae9559912f6240a8a87057911b69edd0) by OverseerThuror (https://sketchfab.com/OverseerThuror) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
